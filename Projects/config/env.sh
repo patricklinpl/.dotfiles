@@ -38,6 +38,12 @@ compresspdf() {
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
 }
 
+# Usage: download-mp3 [link]
 download-mp3() {
     youtube-dl --extract-audio --audio-format mp3 "$@"
+}
+
+# Usage: download-mp4 [link]
+download-mp4() {
+    youtube-dl -f mp4 "$@"
 }
