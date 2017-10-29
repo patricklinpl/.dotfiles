@@ -37,3 +37,7 @@ export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
 compresspdf() {
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
 }
+
+download-mp3() {
+    youtube-dl --extract-audio --audio-format mp3 "$@"
+}
