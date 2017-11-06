@@ -170,16 +170,16 @@ brew bundle install
 
 ### Youtube-dl
 
-Youtube to Audio
+Youtube to mp3
 
 ```
-youtube-dl --extract-audio --audio-format mp3 <video URL>
+download-mp3 <video URL>
 ```
 
 Youtube to mp4
 
 ```
-youtube-dl -f mp4 <video URL>
+download-mp4 <video URL>
 ```
 
 ### File-Conversion
