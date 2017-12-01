@@ -226,3 +226,9 @@ settings put secure sysui_qs_tiles RotationLock,Wifi,Bluetooth,Location,Flashlig
 ```
 gh-md-toc README.md
 ```
+
+### Network Ports
+
+```
+netstat -an | less
+```
