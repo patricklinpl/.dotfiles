@@ -214,7 +214,20 @@ for f in *.mp4; do mv "$f" "${f/.mkv/}"; done
 compresspdf "Input.pdf" "Output.pdf"
 ```
 
-### S8 Data Toggle 
+### S8 
+
+Adhell Disable
+
+```
+AASAservice, ANT Radio Service, ANT+ HAL Service, ANT+ Plugins Service, Always On Display, Amazon, App Zone, AutoPreconfig
+Bixby Global Action, Bixby Home, Bixby Service, Bixby Vision, Bixby Dummy ,Briefing, Calendar, Clock, Contacts
+Email, Finance, Galaxy Apps, Galaxy Essentials Widgets, Game Launcher, Game Tools, Gear VR Service, Gear VR SetupWizardStub
+Gear VR Shell, Google VR Services, Health Services, Messages, Next Issue, Print Spooler, Reminder, Rogers NHL GameCentre Live,
+Samsung Connect, Samsung DeX Home, Samsung Galaxy, Samsung Internet, Samsung Internet Panel, Samsung Keyboard, 
+Samsung Mirrorlink, Samsung Push Service, Samsung setup wizard, samsung text-to-speech engine, Samsung Voice input,
+Spotify, TouchWiz Home, Video Player, Voice wake-up, weather, weather forecase, youtube, com.anroid.provides.partnerbookmarks,
+com.qualcomm.atfwd, com.samsung.android.app.watchmanagerstub
+```
 
 https://www.reddit.com/r/tasker/comments/4zsi0e/project_share_toggle_settings_eg_location_mobile/?st=IZ3F16S4&sh=d7061415
 
