@@ -216,6 +216,8 @@ compresspdf "Input.pdf" "Output.pdf"
 
 ### S8 Data Toggle 
 
+https://www.reddit.com/r/tasker/comments/4zsi0e/project_share_toggle_settings_eg_location_mobile/?st=IZ3F16S4&sh=d7061415
+
 ```
 adb shell
 settings put secure sysui_qs_tiles RotationLock,Wifi,Bluetooth,Location,Flashlight,AirplaneMode,DormantMode,work,MobileData,Hotspot
