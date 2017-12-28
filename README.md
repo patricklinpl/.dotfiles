@@ -214,9 +214,21 @@ for f in *.mp4; do mv "$f" "${f/.mkv/}"; done
 compresspdf "Input.pdf" "Output.pdf"
 ```
 
-### S8 
+### TOC
 
-Adhell 2 Package disabler
+```
+gh-md-toc README.md
+```
+
+### Network Ports
+
+```
+netstat -an | less
+```
+
+## Samsung Galaxy S8+
+
+### Adhell 2 Package Disabler
 
 ```
 AASAservice, ANT Radio Service, ANT+ HAL Service, ANT+ Plugins Service, Always On Display, Amazon, App Zone, Apps edge,
@@ -236,15 +248,3 @@ https://www.reddit.com/r/tasker/comments/4zsi0e/project_share_toggle_settings_eg
 adb shell
 settings put secure sysui_qs_tiles RotationLock,Wifi,Bluetooth,Location,Flashlight,AirplaneMode,DormantMode,work,MobileData,Hotspot
 ``` 
-
-### TOC
-
-```
-gh-md-toc README.md
-```
-
-### Network Ports
-
-```
-netstat -an | less
-```
