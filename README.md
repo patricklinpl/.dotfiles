@@ -13,7 +13,6 @@ References from [sb2nov](http://sourabhbajaj.com/mac-setup/) and [taniarascia](h
     * [Show path bar](#show-path-bar)
     * [Show status bar](#show-status-bar)
   * [ubuntu\-OpenVPN](#ubuntu-openvpn)
-    * [Add More Clients](#add-more-clients)
     * [Troubleshoot OpenVPN](#troubleshoot-openvpn)
   * [Scripts](#scripts)
     * [Mac App Store](#mac-app-store)
@@ -22,8 +21,12 @@ References from [sb2nov](http://sourabhbajaj.com/mac-setup/) and [taniarascia](h
     * [File\-Conversion](#file-conversion)
     * [File\-Scripts](#file-scripts)
     * [Reduce PDF Sizes with GhostScripts](#reduce-pdf-sizes-with-ghostscripts)
-    * [S8 Data Toggle](#s8-data-toggle)
     * [TOC](#toc)
+    * [Network Ports](#network-ports)
+  * [Android](#android)
+    * [Adhell 2 Package Disabler](#adhell-2-package-disabler)
+    * [Tasker](#tasker)
+    * [Quick Toggles](#quick-toggles)
 
 ## System Preferences
 
@@ -105,43 +108,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 ## ubuntu-OpenVPN
 
 Refer to : [How To Set Up an OpenVPN Server on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04)
-
-### Add More Clients
-
-
-1) SSH into droplet
-
-```
-ssh plin@openvpn_server_ip
-```
-
-2) Generate key
-
-```
-//No-Password
-cd ~/openvpn-ca
-source vars
-./build-key <ClientName>
-
-//For Password
-cd ~/openvpn-ca
-source vars
-./build-key-pass <ClientName>
-
-```
-
-3) Generate Client Configurations
-
-```
-cd ~/client-configs
-./make_config.sh <ClientName>
-```
-
-4) Generate OVPN file on local machine
-
-```
-sftp plin@openvpn_server_ip:client-configs/files/<ClientName>.ovpn 
-```
 
 ### Troubleshoot OpenVPN
 
@@ -226,7 +192,7 @@ gh-md-toc README.md
 netstat -an | less
 ```
 
-## Samsung Galaxy S8+
+## Android
 
 ### Adhell 2 Package Disabler
 
@@ -239,10 +205,13 @@ Google VR Services, Health Service, Messages, Next Issue, People edge, Print Spo
 Samsung Connect, Samsung DeX Home, Samsung Galaxy, Samsung Internet, Samsung Internet Panel, Samsung Keyboard, 
 Samsung Mirrorlink, Samsung Push Service, Samsung setup wizard, Samsung text-to-speech engine, Samsung voice input, 
 Smart select, Sports, Spotify, Tasks edge, TouchWiz Home, Video Player, Voice wake-up, Weather, Weather Forecast, YouTube,
-com.anroid.provides.partnerbookmarks, com.qualcomm.atfwd, com.samsung.android.app.watchmanagerstub
+com.android.provides.partnerbookmarks, com.qualcomm.atfwd, com.samsung.android.app.watchmanagerstub
 ```
+### Tasker
 
-https://www.reddit.com/r/tasker/comments/4zsi0e/project_share_toggle_settings_eg_location_mobile/?st=IZ3F16S4&sh=d7061415
+Refer to : [Toggle Mobile Data / Location without root](https://www.reddit.com/r/tasker/comments/4zsi0e/project_share_toggle_settings_eg_location_mobile/?st=IZ3F16S4&sh=d7061415)
+
+### Quick Toggles 
 
 ```
 adb shell
