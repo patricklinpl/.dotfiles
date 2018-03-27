@@ -207,6 +207,8 @@ Samsung Mirrorlink, Samsung Push Service, Samsung setup wizard, Samsung text-to-
 Smart select, Sports, Spotify, Tasks edge, TouchWiz Home, Video Player, Voice wake-up, Weather, Weather Forecast, YouTube,
 com.android.provides.partnerbookmarks, com.qualcomm.atfwd, com.samsung.android.app.watchmanagerstub
 ```
+[KNOX SDK Enterprise Key Renewal](https://seap.samsung.com/license-keys)
+
 ### Tasker
 
 Refer to : [Toggle Mobile Data / Location without root](https://www.reddit.com/r/tasker/comments/4zsi0e/project_share_toggle_settings_eg_location_mobile/?st=IZ3F16S4&sh=d7061415)
