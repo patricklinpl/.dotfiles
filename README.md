@@ -208,6 +208,8 @@ Smart select, Sports, Spotify, Tasks edge, TouchWiz Home, Video Player, Voice wa
 com.android.provides.partnerbookmarks, com.qualcomm.atfwd, com.samsung.android.app.watchmanagerstub
 ```
 [KNOX SDK Enterprise Key Renewal](https://seap.samsung.com/license-keys)
+1. License Keys
+2. Legacy SDKs > Knox Standard SDK > Enterprise license key > generate license key
 
 ### Tasker
 
