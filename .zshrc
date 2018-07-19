@@ -3,7 +3,7 @@
 export PATH="/usr/local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/patricklin/.oh-my-zsh
+# export ZSH=/Users/patricklin/.oh-my-zsh
 
 # Set name of the theme to load.
 ZSH_THEME="powerlevel9k/powerlevel9k"
