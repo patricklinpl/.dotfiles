@@ -1,19 +1,10 @@
 #!/bin/zsh
 
-# PATH
-# export PATH="/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export EDITOR='subl -w'
-# export PYTHONPATH=$PYTHONPATH
-# export MANPATH="/usr/local/man:$MANPATH"
+# Add commonly used folders to $PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# Virtual Environment
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/projects
-# source /usr/local/bin/virtualenvwrapper.sh
-
-# Owner
-export USER_NAME="patricklin"
-eval "$(rbenv init -)"
+# Specify default editor. Possible values: vim, nano, ed etc.
+export EDITOR=nano
 
 # FileSearch
 function f() { find . -iname "*$1*" ${@:2} }
@@ -26,12 +17,15 @@ function mkcd() { mkdir -p "$@" && cd "$_"; }
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
-# Use sublimetext for editing config files
-alias zshconfig="subl ~/.zshrc"
-alias envconfig="subl ~/Projects/config/env.sh"eval "$(pyenv init -)"
+# Python
+alias pip='pip3'
+alias python='python3' 
+
+# MySQL
+alias sql='mysql -uroot'
 
 # Java 
-export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
+export JAVA_HOME="`/usr/libexec/java_home -v 10`"
 
 # Usage: compresspdf [input file] [output file] [screen*|ebook|printer|prepress]
 compresspdf() {
@@ -46,4 +40,19 @@ download-mp3() {
 # Usage: download-mp4 [link]
 download-mp4() {
     youtube-dl -f mp4 "$@"
+}
+
+# Homebrew Conda Fix
+export SANS_ANACONDA="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$SANS_ANACONDA"
+
+alias rmConda="export PATH="\$SANS_ANACONDA""
+alias mvConda="export PATH="/anaconda3/bin:\$SANS_ANACONDA""
+
+brew () {
+  rmConda
+  command brew "$@"
+  mvConda
 }
