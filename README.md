@@ -2,31 +2,67 @@
 
 Personal configuration for macOS
 
-References from [sb2nov](http://sourabhbajaj.com/mac-setup/) and [taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
-
 ## Table of Contents
 
+  * [Zsh](#zsh)
+  * [Dev Environment](#dev-environment)
+  * [Applications](#applications)
+  * [Powerline Font](#powerline-font)
   * [System Preferences](#system-preferences)
   * [Finder Preferences](#finder-preferences)
     * [Show Library folder](#show-library-folder)
     * [Show hidden files](#show-hidden-files)
     * [Show path bar](#show-path-bar)
     * [Show status bar](#show-status-bar)
-  * [ubuntu\-OpenVPN](#ubuntu-openvpn)
-    * [Troubleshoot OpenVPN](#troubleshoot-openvpn)
-  * [Scripts](#scripts)
-    * [Mac App Store](#mac-app-store)
-    * [Brewfile](#brewfile)
+  * [CLI Usage](#cli-usage)
+    * [Bulk Install Applications](#bulk-install-applications)
     * [Youtube\-dl](#youtube-dl)
     * [File\-Conversion](#file-conversion)
     * [File\-Scripts](#file-scripts)
     * [Reduce PDF Sizes with GhostScripts](#reduce-pdf-sizes-with-ghostscripts)
     * [TOC](#toc)
     * [Network Ports](#network-ports)
-  * [Android](#android)
-    * [Adhell 2 Package Disabler](#adhell-2-package-disabler)
-    * [Tasker](#tasker)
-    * [Quick Toggles](#quick-toggles)
+  * [Acknowledgements](#acknowledgements)
+
+## Zsh
+
+    $ git clone https://github.com/patricklinpl/macOS-setup.git
+    $ cd macOS-setup
+    $ mv .zshrc ~
+    $ mv env.sh ~
+
+## Dev Environment
+
+Sections to install from [sb2nov's mac-setup guide](http://sourabhbajaj.com/mac-setup/):
+
+- Xcode
+- Homebrew
+  - cask
+- iTerm2
+  - Zsh
+    - Oh My Zsh
+- Git
+- Python
+  - pip
+- MySQL
+- CPlusPlus
+- Java
+- Node.js
+- Security and Safety
+
+## Applications
+- [Bulk install applications](#Bulk-Install-Applications)
+- [TotalFinder](https://totalfinder.binaryage.com/)
+
+## Powerline Font
+
+    $ git clone https://github.com/powerline/fonts.git --depth=1
+    $ cd fonts
+    $ ./install.sh
+    $ cd ..
+    $ rm -rf fonts
+
+In **iTerm2 > Preferences > Profiles > Text > Change Font >** 14pt Source Code Pro for Powerline
 
 ## System Preferences
 
@@ -105,119 +141,64 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
-## ubuntu-OpenVPN
+## CLI Usage
 
-Refer to : [How To Set Up an OpenVPN Server on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04)
+### Bulk Install Applications
 
-### Troubleshoot OpenVPN
-
-When switching networks:
-```
-//Turn off wifi
-sudo route flush
-//Turn on wifi
-```
-
-## Scripts
-
-### Mac App Store
-
-```shell
-brew install mas
-```
-
-### Brewfile
 Move Brewfile to main directory. Run command to install: 
 
-```shell
-brew bundle install
-
-```
-
+    $ brew bundle install
+    
 ### Youtube-dl
 
 Youtube to mp3
 
-```
-download-mp3 <video URL>
-```
+    $ download-mp3 <video URL>
+
 
 Youtube to mp4
 
-```
-download-mp4 <video URL>
-```
+    $ download-mp4 <video URL>
+
 
 ### File-Conversion
 
 Single File Conversion
 
-```
-ffmpeg -i LostInTranslation.mkv -vcodec copy -acodec copy LostInTranslation.mp4
-```
+    $ ffmpeg -i LostInTranslation.mkv -vcodec copy -acodec copy LostInTranslation.mp4
+
 
 Directory Loop Conversion 
 
-```
-for i in *mkv; do ffmpeg -i $i -vcodec copy -acodec copy $i.mp4; done
-```
+    $ for i in *mkv; do ffmpeg -i $i -vcodec copy -acodec copy $i.mp4; done
+
 
 ### File-Scripts
 
 Remove file with type
-```
-for i in *.avi; do rm $i; done
-```
+
+    $ for i in *.avi; do rm $i; done
 
 Remove a substring
-```
-for f in *.mp4; do mv "$f" "${f/.mkv/}"; done
-```
+
+    $ for f in *.mp4; do mv "$f" "${f/.mkv/}"; done
+
 
 ### Reduce PDF Sizes with GhostScripts
 
-```
-compresspdf "Input.pdf" "Output.pdf"
-```
+    $ compresspdf "Input.pdf" "Output.pdf"
+
 
 ### TOC
 
-```
-gh-md-toc README.md
-```
+    $ gh-md-toc README.md
+
 
 ### Network Ports
 
-```
-netstat -an | less
-```
+    $ netstat -an | less
 
-## Android
+## Acknowledgements
 
-### Adhell 2 Package Disabler
-
-```
-AASAservice, ANT Radio Service, ANT+ HAL Service, ANT+ Plugins Service, Always On Display, Amazon, App Zone, Apps edge,
-AutoPreconfig, Bixby Global Action, Bixby Home, Bixby Service, Bixby Vision, Bixby Dummy, Briefing, CNN for Edge Panel,
-Calendar, Clipboard edge, Clock, Contacts, Edge screen, Email, Favorite Contacts, Finance, Galaxy Apps, 
-Galaxy Essentials Widget, Game Launcher, Game Tools, Gear VR Service, Gear VR SetupWizardStub, Gear VR Shell, 
-Google VR Services, Health Service, Messages, Next Issue, People edge, Print Spooler, Reminder, Rogers NHL GameCentre Live,
-Samsung Connect, Samsung DeX Home, Samsung Galaxy, Samsung Internet, Samsung Internet Panel, Samsung Keyboard, 
-Samsung Mirrorlink, Samsung Push Service, Samsung setup wizard, Samsung text-to-speech engine, Samsung voice input, 
-Smart select, Sports, Spotify, Tasks edge, TouchWiz Home, Video Player, Voice wake-up, Weather, Weather Forecast, YouTube,
-com.android.provides.partnerbookmarks, com.qualcomm.atfwd, com.samsung.android.app.watchmanagerstub
-```
-[KNOX SDK Enterprise Key Renewal](https://seap.samsung.com/license-keys)
-1. License Keys
-2. Legacy SDKs > Knox Standard SDK > Enterprise license key > generate license key
-
-### Tasker
-
-Refer to : [Toggle Mobile Data / Location without root](https://www.reddit.com/r/tasker/comments/4zsi0e/project_share_toggle_settings_eg_location_mobile/?st=IZ3F16S4&sh=d7061415)
-
-### Quick Toggles 
-
-```
-adb shell
-settings put secure sysui_qs_tiles RotationLock,Wifi,Bluetooth,Location,Flashlight,AirplaneMode,DormantMode,work,MobileData,Hotspot
-``` 
+- [sb2nov](http://sourabhbajaj.com/mac-setup/) 
+- [taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
