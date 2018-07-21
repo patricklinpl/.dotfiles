@@ -54,7 +54,13 @@ Sections to install from [sb2nov's mac-setup guide](http://sourabhbajaj.com/mac-
 - [Bulk install applications](#Bulk-Install-Applications)
 - [TotalFinder](https://totalfinder.binaryage.com/)
 
-## Powerline Font
+## Powerline Theme
+
+Powerline Theme:
+
+    $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+PowerLine Font:
 
     $ git clone https://github.com/powerline/fonts.git --depth=1
     $ cd fonts
