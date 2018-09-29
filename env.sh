@@ -4,7 +4,7 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Specify default editor. Possible values: vim, nano, ed etc.
-export EDITOR=nano
+export EDITOR=vim
 
 # FileSearch
 function f() { find . -iname "*$1*" ${@:2} }
@@ -15,17 +15,18 @@ function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # Aliases
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor; cd ~/.vim_runtime && git pull --rebase && cd -'
 
 # Python
 alias pip='pip3'
-alias python='python3' 
+alias python='python3'
 
 # MySQL
 alias sql='mysql -uroot'
 
-# Java 
+# Java
 export JAVA_HOME="`/usr/libexec/java_home -v 10`"
+javacc() { javac $1.java && java $1 }
 
 # Usage: compresspdf [input file] [output file] [screen*|ebook|printer|prepress]
 compresspdf() {
@@ -56,3 +57,5 @@ brew () {
   command brew "$@"
   mvConda
 }
+
+export PATH="/usr/local/opt/node@8/bin:$PATH"
