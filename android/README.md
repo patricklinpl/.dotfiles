@@ -15,5 +15,5 @@ Refer to : [Toggle Mobile Data / Location without root](https://www.reddit.com/r
 
 ```
 adb shell
-settings put secure sysui_qs_tiles RotationLock,Wifi,Bluetooth,Location,Flashlight,AirplaneMode,DormantMode,work,MobileData,Hotspot
+settings put secure sysui_qs_tiles RotationLock,Wifi,MobileData,Bluetooth,Location,Flashlight,AirplaneMode,Sync,NFC
 ``` 
