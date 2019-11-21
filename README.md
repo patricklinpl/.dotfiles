@@ -7,7 +7,6 @@ Personal configuration for macOS
   * [Zsh](#zsh)
   * [Dev Environment](#dev-environment)
   * [Applications](#applications)
-  * [Powerline Font](#powerline-font)
   * [System Preferences](#system-preferences)
   * [Finder Preferences](#finder-preferences)
     * [Show Library folder](#show-library-folder)
@@ -29,7 +28,6 @@ Personal configuration for macOS
     $ git clone https://github.com/patricklinpl/macOS-setup.git
     $ cd macOS-setup
     $ mv .zshrc ~
-    $ mv env.sh ~
 
 ## Dev Environment
 
@@ -52,23 +50,6 @@ Sections to install from [sb2nov's mac-setup guide](http://sourabhbajaj.com/mac-
 
 ## Applications
 - [Bulk install applications](#Bulk-Install-Applications)
-- [TotalFinder](https://totalfinder.binaryage.com/)
-
-## Powerline Theme
-
-Powerline Theme:
-
-    $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
-PowerLine Font:
-
-    $ git clone https://github.com/powerline/fonts.git --depth=1
-    $ cd fonts
-    $ ./install.sh
-    $ cd ..
-    $ rm -rf fonts
-
-In **iTerm2 > Preferences > Profiles > Text > Change Font >** 14pt Source Code Pro for Powerline
 
 ## System Preferences
 
