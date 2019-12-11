@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/patricklin/.oh-my-zsh"
@@ -116,12 +116,13 @@ export JAVA_HOME="`/usr/libexec/java_home`"
 eval "$(rbenv init -)"
 
 # nvm
-export NVM_DIR="/Users/patricklin/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # brew
 alias brewup='brew update; brew upgrade; brew cask upgrade; brew cleanup; brew doctor'
 
 # dev
-alias devup='brew services start postgres; brew services start redis;'
-alias devdown='brew services stop postgres; brew services stop redis;'
+alias devup='brew services start --all;'
+alias devdown='brew services stop --all;'
