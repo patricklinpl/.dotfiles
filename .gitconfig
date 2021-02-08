@@ -1,7 +1,0 @@
-[user]
-	name = Patrick Lin
-	email = patricklinpl@hotmail.com
-[core]
-	excludesfile = /Users/patricklin/.gitignore
-[credential]
-	helper = osxkeychain
