@@ -2,54 +2,9 @@
 
 Personal configuration for macOS
 
-## Table of Contents
+## .dotfiles
 
-  * [Zsh](#zsh)
-  * [Dev Environment](#dev-environment)
-  * [Applications](#applications)
-  * [System Preferences](#system-preferences)
-  * [Finder Preferences](#finder-preferences)
-    * [Show Library folder](#show-library-folder)
-    * [Show hidden files](#show-hidden-files)
-    * [Show path bar](#show-path-bar)
-    * [Show status bar](#show-status-bar)
-  * [CLI Usage](#cli-usage)
-    * [Bulk Install Applications](#bulk-install-applications)
-    * [Youtube\-dl](#youtube-dl)
-    * [File\-Conversion](#file-conversion)
-    * [File\-Scripts](#file-scripts)
-    * [Reduce PDF Sizes with GhostScripts](#reduce-pdf-sizes-with-ghostscripts)
-    * [TOC](#toc)
-    * [Network Ports](#network-ports)
-  * [Acknowledgements](#acknowledgements)
-
-## Zsh
-
-    $ git clone https://github.com/patricklinpl/macOS-setup.git
-    $ cd macOS-setup
-    $ mv .zshrc ~
-
-## Dev Environment
-
-Sections to install from [sb2nov's mac-setup guide](http://sourabhbajaj.com/mac-setup/):
-
-- Xcode
-- Homebrew
-  - cask
-- iTerm2
-  - Zsh
-    - Oh My Zsh
-- Git
-- Python
-  - pip
-- MySQL
-- CPlusPlus
-- Java
-- Node.js
-- Security and Safety
-
-## Applications
-- [Bulk install applications](#Bulk-Install-Applications)
+TBA
 
 ## System Preferences
 
@@ -129,12 +84,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
 ## CLI Usage
-
-### Bulk Install Applications
-
-Move Brewfile to main directory. Run command to install: 
-
-    $ brew bundle install
     
 ### Youtube-dl
 
