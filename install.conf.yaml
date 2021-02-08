@@ -1,0 +1,36 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.ssh/config: .ssh/config
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore: .gitignore
+    ~/.hushlogin: .hushlogin
+    ~/.zshrc: .zshrc
+
+- create:
+    - ~/git/github.com
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - 
+    command: xcode-select --install
+    description: install command line tools
+  - 
+    command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    description: install Homebrew 
+  -
+    command: brew bundle --file ~/.dotfiles/Brewfile
+    description: install software
+  -
+    command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    description: install zsh-autosuggestions
+  - 
+    command: mkdir -p "$HOME/.zsh"
+    description: create folder .zsh
+  - 
+    command: git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+    description: get pure theme

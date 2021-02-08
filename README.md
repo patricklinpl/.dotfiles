@@ -2,9 +2,17 @@
 
 Personal configuration for macOS
 
-## .dotfiles
+## Install 
 
-TBA
+```
+git clone git@github.com:patricklinpl/.dotfiles.git && cd dotfiles && ./install
+```
+
+### Brew Dump
+
+```
+brew bundle dump --describe 
+```
 
 ## System Preferences
 
@@ -71,18 +79,6 @@ This can also be done by pressing `command` + `shift` + `.`
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
-### Show path bar
-
-```shell
-defaults write com.apple.finder ShowPathbar -bool true
-```
-
-### Show status bar
-
-```shell
-defaults write com.apple.finder ShowStatusBar -bool true
-```
-
 ## CLI Usage
     
 ### Youtube-dl
@@ -138,3 +134,6 @@ Remove a substring
 
 - [sb2nov](http://sourabhbajaj.com/mac-setup/) 
 - [taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
+- [dotbot](https://github.com/anishathalye/dotbot)
+- [~/.dotfiles in 100 Seconds](https://www.youtube.com/watch?v=r_MpUP6aKiQ)
+- [Dotfiles from Start to Finish-ish](https://www.udemy.com/course/dotfiles-from-start-to-finish-ish/?referralCode=445BE0B541C48FE85276)

@@ -1,0 +1,17 @@
+[alias]
+	# Change commit history
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+
+	# Force push
+	pushf = push --force-with-lease
+
+	# Show the user email for the current repository.
+	whoami = config user.email
+
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore
+
+[user]
+	name = Patrick Lin
+	email = 15319206+patricklinpl@users.noreply.github.com
