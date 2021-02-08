@@ -1,4 +1,4 @@
-# macOS-setup
+# .dotfiles
 
 Personal configuration for macOS
 
