@@ -20,6 +20,9 @@
     command: brew bundle --file ~/.dotfiles/Brewfile
     description: install software
   -
+    command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    description: install oh-my-zsh
+  -
     command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     description: install zsh-autosuggestions
   - 

@@ -5,6 +5,12 @@ Personal configuration for macOS
 ## Install 
 
 ```
+// Command Line Tools for Xcode
+sudo xcode-select --install
+
+// Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 git clone git@github.com:patricklinpl/.dotfiles.git && cd dotfiles && ./install
 ```
 
