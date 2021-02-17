@@ -49,7 +49,9 @@ cask "font-source-code-pro"
 cask "google-chrome"
 # HTTP and GraphQL Client
 cask "insomnia"
+# IDE for Java development - community edition
 cask "intellij-idea"
+cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Tool to prevent the system from going into sleep mode
@@ -64,6 +66,8 @@ cask "logitech-options"
 cask "postico"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Instant messaging application focusing on security
+cask "signal"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
