@@ -48,8 +48,7 @@ cask "docker"
 cask "font-source-code-pro"
 # Web browser
 cask "google-chrome"
-# HTTP and GraphQL Client
-cask "insomnia"
+# Java IDE
 cask "intellij-idea"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
