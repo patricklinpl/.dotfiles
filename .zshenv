@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias brewup='brew update; brew upgrade; brew upgrade --cask; brew cleanup; brew doctor'
+alias reload='source ~/.zshrc'
 # dev
 alias devup='brew services start --all;'
 alias devdown='brew services stop --all;'
