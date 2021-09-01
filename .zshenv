@@ -29,3 +29,7 @@ autoload -U promptinit; promptinit
 prompt pure
 # pyenv
 # eval "$(pyenv init -)"
+# jenv
+# . <(jenv init -)
+# rbenv
+# eval "$(rbenv init -)"
