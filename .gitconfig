@@ -11,4 +11,4 @@
 
 [user]
 	name = Patrick Lin
-	email = 15319206+patricklinpl@users.noreply.github.com
+	useConfigOnly = true

@@ -14,6 +14,12 @@ sudo xcode-select --install
 git clone git@github.com:patricklinpl/.dotfiles.git && cd dotfiles && ./install
 ```
 
+### Configure Git per Repo
+
+```
+git config --local user.email "15319206+patricklinpl@users.noreply.github.com"
+```
+
 ### Brew Dump
 
 ```
