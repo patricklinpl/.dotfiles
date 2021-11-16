@@ -7,13 +7,15 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Specify default editor. Possible values: vim, nano, ed etc.
 export EDITOR=vim
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Sources 
 source $ZSH/oh-my-zsh.sh
+
+# User Configuration
+# Pure theme
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
 
 # Aliases
 alias brewup='brew update; brew upgrade; brew upgrade --cask; brew cleanup; brew doctor'
@@ -21,15 +23,24 @@ alias reload='source ~/.zshrc'
 # dev
 alias devup='brew services start --all;'
 alias devdown='brew services stop --all;'
+# git
+alias git-personal='git config --local user.email "15319206+patricklinpl@users.noreply.github.com"'
 
-# User Configuration
-# Pure theme
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+#
+# Language Version Manager
+#
+
 # pyenv
-# eval "$(pyenv init -)"
+export PYENV_ROOT=$(pyenv root)
+export PATH="$PYENV_ROOT/shims:$PATH"
+eval "$(pyenv init -)"
+
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # jenv
-# . <(jenv init -)
+. <(jenv init -)
+
 # rbenv
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"

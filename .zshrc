@@ -22,4 +22,4 @@ ZSH_DISABLE_COMPFIX=true
 plugins=(brew docker git zsh-autosuggestions)
 
 source ~/.dotfiles/.zshenv
-source ~/.dotfiles/.aliases
+source ~/dotfiles/.aliases
