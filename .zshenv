@@ -40,6 +40,7 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # jenv
+# Dynamically set JAVA_HOME: jenv enable-plugin export
 . <(jenv init -)
 
 # rbenv
