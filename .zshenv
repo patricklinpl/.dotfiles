@@ -33,18 +33,4 @@ alias git-personal='git config --local user.email "15319206+patricklinpl@users.n
 # Language Version Manager
 #
 
-# pyenv
-export PYENV_ROOT=$(pyenv root)
-export PATH="$PYENV_ROOT/shims:$PATH"
-eval "$(pyenv init -)"
-
-# nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# jenv
-# Dynamically set JAVA_HOME: jenv enable-plugin export
-. <(jenv init -)
-
-# rbenv
-eval "$(rbenv init -)"
+. /opt/asdf-vm/asdf.sh
