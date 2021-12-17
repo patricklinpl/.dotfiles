@@ -1,22 +1,12 @@
 #!/bin/zsh
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-
 # Exports 
+export HISTSIZE=100000
+export SAVEHIST=100000
 # Add commonly used folders to $PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Specify default editor. Possible values: vim, nano, ed etc.
 export EDITOR=vim
-
-# Enable Starship
-eval "$(starship init zsh)"
-# User Configuration
-# Pure theme
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
 
 # Aliases
 alias reload='source ~/.zshrc'
@@ -26,11 +16,18 @@ alias brewup='brew update; brew upgrade; brew upgrade --cask; brew cleanup; brew
 alias devup='brew services start --all;'
 alias devdown='brew services stop --all;'
 
-# git
+# arch
+alias pacaur='makepkg -s'
+
+# Git Aliases
+alias c='git-smart-commit'
+alias a='git-smart-add'
+alias p='git-smart-push'
+alias u='git-smart-pull'
+alias r='git-smart-remote'
 alias git-personal='git config --local user.email "15319206+patricklinpl@users.noreply.github.com"'
 
-#
 # Language Version Manager
-#
-
-. /opt/asdf-vm/asdf.sh
+. $HOME/.asdf/asdf.sh
+# Java
+. ~/.asdf/plugins/java/set-java-home.zsh

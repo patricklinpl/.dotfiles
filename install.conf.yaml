@@ -19,32 +19,20 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   -
-    command: if [[ `uname` = Linux ]]; then sudo apt install curl; else echo "Linux not detected. Skipping..."; fi
-    description: install curl for Linux
-    stdin: true
-    stdout: true
-    stderr: true
-  -
     command: if [[ `uname` = Darwin ]]; then brew bundle --file ~/.dotfiles/Brewfile; else echo "macOS not detected. Skipping..."; fi
     description: install software for macOs
     stdin: true
     stdout: true
     stderr: true
   -
-    command: sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-    description: install Starship
+    command: cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+    description: install asdf
     stdin: true
     stdout: true
     stderr: true
   -
-    command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    description: install zsh-autosuggestions
+    command: cd ~ && curl -L git.io/antigen > antigen.zsh
+    description: install antigen
     stdin: true
     stdout: true
     stderr: true
-  - 
-    command: mkdir -p "$HOME/.zsh"
-    description: create folder .zsh
-  - 
-    command: git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-    description: get pure theme
