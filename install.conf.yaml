@@ -25,6 +25,12 @@
     stdout: true
     stderr: true
   -
+    command: if [[ `uname` = Linux ]]; then sudo apt-get install fonts-powerline; else echo "Linux not detected. Skipping..."; fi
+    description: install powerline fonts, see https://github.com/agnoster/agnoster-zsh-theme
+    stdin: true
+    stdout: true
+    stderr: true
+  -
     command: cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
     description: install asdf
     stdin: true

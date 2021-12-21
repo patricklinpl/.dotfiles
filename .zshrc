@@ -32,9 +32,6 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/archlinux
-	archlinux
-
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
 	asdf
 
