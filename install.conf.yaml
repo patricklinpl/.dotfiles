@@ -25,14 +25,26 @@
     stdout: true
     stderr: true
   -
-    command: if [[ `uname` = Linux ]]; then sudo apt-get install fonts-powerline; else echo "Linux not detected. Skipping..."; fi
+    command: git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. && rm -rf fonts
     description: install powerline fonts, see https://github.com/agnoster/agnoster-zsh-theme
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: if [[ `uname` = Linux ]]; then sudo apt install fonts-firacode; else echo "Linux not detected. Skipping..."; fi
+    description: install firacode fonts
     stdin: true
     stdout: true
     stderr: true
   -
     command: cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
     description: install asdf
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: asdf plugin-add java && asdf install java temurin-8.0.312+7 && asdf global java temurin-8.0.312+7
+    description: install java
     stdin: true
     stdout: true
     stderr: true

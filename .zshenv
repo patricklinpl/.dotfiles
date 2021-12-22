@@ -16,9 +16,6 @@ alias brewup='brew update; brew upgrade; brew upgrade --cask; brew cleanup; brew
 alias devup='brew services start --all;'
 alias devdown='brew services stop --all;'
 
-# arch
-alias pacaur='makepkg -s'
-
 # Git Aliases
 alias c='git-smart-commit'
 alias a='git-smart-add'

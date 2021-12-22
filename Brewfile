@@ -40,8 +40,8 @@ cask "appcleaner"
 cask "bitwarden"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Source Code Pro is a monospaced sans serif
-cask "font-source-code-pro"
+# Fira Code is a free monospaced font with programming ligatures
+cask "font-fira-code"
 # Web browser
 cask "firefox"
 # Web browser
