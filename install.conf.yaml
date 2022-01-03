@@ -56,7 +56,7 @@
     stdout: true
     stderr: true
   -
-    command: if [[ `uname` = Darwin ]]; then brew install antigen; else cd ~ && curl -L git.io/antigen > antigen.zsh; fi
+    command: cd ~ && curl -L git.io/antigen > antigen.zsh
     description: install antigen
     stdin: true
     stdout: true
