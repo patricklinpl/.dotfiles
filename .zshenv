@@ -24,6 +24,8 @@ alias u='git-smart-pull'
 alias r='git-smart-remote'
 alias git-personal='git config --local user.email "15319206+patricklinpl@users.noreply.github.com"'
 
+alias odl='cat ~/.okta | okta-docker-login --mfa push'
+
 # Language Version Manager
 . $HOME/.asdf/asdf.sh
 # Java
