@@ -1,16 +1,13 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "homebrew/services"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Desktop password and login vault
 cask "bitwarden"
-# App to build and share containerized applications and microservices
-cask "docker"
-# Fira Code is a free monospaced font with programming ligatures
 cask "font-fira-code"
 # Web browser
 cask "firefox"

@@ -77,3 +77,4 @@ antigen apply
 # User configuration
 
 source ~/.dotfiles/.zshenv
+source ~/dotfiles/.aliases
