@@ -3,8 +3,7 @@
 # Exports 
 export HISTSIZE=100000
 export SAVEHIST=100000
-# Add commonly used folders to $PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # Specify default editor. Possible values: vim, nano, ed etc.
 export EDITOR=vim
 
@@ -28,5 +27,3 @@ alias odl='cat ~/.okta | okta-docker-login --mfa push'
 
 # Language Version Manager
 . $HOME/.asdf/asdf.sh
-# Java
-. ~/.asdf/plugins/java/set-java-home.zsh
