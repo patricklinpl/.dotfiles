@@ -10,6 +10,7 @@
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore
     ~/.hushlogin: .hushlogin
+    ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
 
 - create:
@@ -40,18 +41,6 @@
   -
     command: cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
     description: install asdf
-    stdin: true
-    stdout: true
-    stderr: true
-  -
-    command: asdf plugin-add java && asdf install java temurin-8.0.312+7 && asdf global java temurin-8.0.312+7
-    description: install java
-    stdin: true
-    stdout: true
-    stderr: true
-  -
-    command: asdf plugin add nodejs && asdf install nodejs lts-dubnium && asdf global nodejs lts-dubnium
-    description: install nodejs
     stdin: true
     stdout: true
     stderr: true
