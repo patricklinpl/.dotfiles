@@ -22,31 +22,31 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   -
-    command: if [[ `uname` = Darwin ]]; then brew bundle --file ~/.dotfiles/Brewfile; else echo "macOS not detected. Skipping..."; fi
+    command: if [[ `uname` = Darwin ]] && [[ ! -e ~/Brewfile ]]; then brew bundle --file ~/.dotfiles/Brewfile; else tput setaf 2; echo "Skipping Brew install"; fi
     description: install software for macOs
     stdin: true
     stdout: true
     stderr: true
   -
-    command: if [[ `uname` = Linux ]]; then git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. && rm -rf fonts; else echo "Linux not detected. Skipping..."; fi
+    command: if [[ `uname` = Linux ]]; then git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. && rm -rf fonts; else tput setaf 2; echo "Linux not detected. Skipping..."; fi
     description: install powerline fonts, see https://github.com/agnoster/agnoster-zsh-theme
     stdin: true
     stdout: true
     stderr: true
   -
-    command: if [[ `uname` = Linux ]]; then sudo apt install fonts-firacode; else echo "Linux not detected. Skipping..."; fi
+    command: if [[ `uname` = Linux ]]; then sudo apt install fonts-firacode; else tput setaf 2; echo "Linux not detected. Skipping..."; fi
     description: install firacode fonts
     stdin: true
     stdout: true
     stderr: true
   -
-    command: cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+    command: if [[ -e ~/.asdf ]]; then tput setaf 2; echo "~/.asdf exists. Skipping..."; else cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1; fi
     description: install asdf
     stdin: true
     stdout: true
     stderr: true
   -
-    command: cd ~ && curl -L git.io/antigen > antigen.zsh
+    command: if [[ -e ~/antigen.zsh ]]; then tput setaf 2; echo "~/antigen.zsh exists. Skipping..."; else cd ~ && curl -L git.io/antigen > antigen.zsh; fi
     description: install antigen
     stdin: true
     stdout: true
