@@ -28,7 +28,7 @@
     stdout: true
     stderr: true
   -
-    command: git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. && rm -rf fonts
+    command: if [[ `uname` = Linux ]]; then git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. && rm -rf fonts; else echo "Linux not detected. Skipping..."; fi
     description: install powerline fonts, see https://github.com/agnoster/agnoster-zsh-theme
     stdin: true
     stdout: true
