@@ -1,0 +1,80 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/bundle": {
+        "revision": "d40b20f64e29453a77290f7c329cf336a59e8b66"
+      },
+      "homebrew/cask": {
+        "revision": "81cd65a393f6872b7f2c0dd1cf6a30923f4de4ae"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "c9559ae77a446cad0fafb64a11ad2a3cc695012c"
+      },
+      "homebrew/core": {
+        "revision": "a5e383cfa5a90d1e3348b7f76120b03486045bcc"
+      }
+    },
+    "cask": {
+      "font-fira-code": {
+        "version": "6.2",
+        "options": {
+          "full_name": "font-fira-code"
+        }
+      },
+      "iterm2": {
+        "version": "3.4.15",
+        "options": {
+          "full_name": "iterm2"
+        }
+      },
+      "keepingyouawake": {
+        "version": "1.6.1",
+        "options": {
+          "full_name": "keepingyouawake"
+        }
+      },
+      "postico": {
+        "version": "1.5.20",
+        "options": {
+          "full_name": "postico"
+        }
+      },
+      "postman": {
+        "version": "9.9.3",
+        "options": {
+          "full_name": "postman"
+        }
+      },
+      "rectangle": {
+        "version": "0.50,55",
+        "options": {
+          "full_name": "rectangle"
+        }
+      },
+      "spotify": {
+        "version": "1.1.77.643,3c4c6fc6,18",
+        "options": {
+          "full_name": "spotify"
+        }
+      },
+      "sublime-text": {
+        "version": "4.126",
+        "options": {
+          "full_name": "sublime-text"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "monterey": {
+        "HOMEBREW_VERSION": "3.3.12",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "a5e383cfa5a90d1e3348b7f76120b03486045bcc",
+        "CLT": "13.2.0.0.1.1638488800",
+        "Xcode": "13.1",
+        "macOS": "12.1"
+      }
+    }
+  }
+}
