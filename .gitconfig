@@ -10,6 +10,9 @@
 	excludesfile = ~/.gitignore
 	commitGraph = true
 
+[pull]
+	ff = only
+
 [user]
 	name = Patrick Lin
 	useConfigOnly = true
