@@ -8,7 +8,27 @@
 [core]
 	editor = code --wait
 	excludesfile = ~/.gitignore
+	commitGraph = true
 
 [user]
 	name = Patrick Lin
 	useConfigOnly = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[credential]
+	helper = 
+	helper = store --file /opt/dev/var/private/git_credential_store
+
+[diff]
+	algorithm = patience
+
+[gc]
+	writeCommitGraph = true
+
+[protocol]
+	version = 2
