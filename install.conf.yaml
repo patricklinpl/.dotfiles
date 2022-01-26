@@ -15,8 +15,8 @@
     ~/.zshrc: .zshrc
 
 - create:
-    - ~/git/github.com
-    - ~/git/bitbucket.org
+    - ~/src/github.com
+    - ~/src/bitbucket.org
     - ~/dotfiles
 
 - shell:
