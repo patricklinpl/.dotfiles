@@ -26,4 +26,4 @@ alias git-personal='git config --local user.email "15319206+patricklinpl@users.n
 alias odl='cat ~/.okta | okta-docker-login --mfa push'
 
 # Language Version Manager
-# . $HOME/.asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
