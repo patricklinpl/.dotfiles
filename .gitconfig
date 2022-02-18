@@ -8,7 +8,6 @@
 [core]
 	editor = code --wait
 	excludesfile = ~/.gitignore
-	commitGraph = true
 
 [pull]
 	ff = only
@@ -23,15 +22,5 @@
 	process = git-lfs filter-process
 	required = true
 
-[credential]
-	helper = 
-	helper = store --file /opt/dev/var/private/git_credential_store
-
-[diff]
-	algorithm = patience
-
-[gc]
-	writeCommitGraph = true
-
-[protocol]
-	version = 2
+[include]
+	path = /Users/patricklinpl/.config/dev/gitconfig
