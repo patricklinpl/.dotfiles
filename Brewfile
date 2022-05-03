@@ -1,6 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
+# tap "homebrew/cask-fonts"
 tap "homebrew/core"
 # Pack, ship and run any application as a lightweight container
 # brew "docker"
@@ -8,7 +8,7 @@ tap "homebrew/core"
 # brew "vim"
 # Desktop password and login vault
 # cask "bitwarden"
-cask "font-fira-code"
+# cask "font-fira-code"
 # Web browser
 # cask "firefox"
 # Web browser
@@ -18,9 +18,9 @@ cask "iterm2"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
 # GUI client for PostgreSQL databases
-cask "postico"
+# cask "postico"
 # Collaboration platform for API development
-cask "postman"
+# cask "postman"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software

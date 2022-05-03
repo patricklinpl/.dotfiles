@@ -39,12 +39,6 @@ antigen bundles <<EOBUNDLES
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
 	asdf
-
-    # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colorize
-    colorize
- 
-	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found
-	command-not-found
     
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
 	macos
