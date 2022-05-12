@@ -67,13 +67,20 @@ EOBUNDLES
 # Load the theme.
 # antigen theme robbyrussell
 # https://github.com/zsh-users/antigen/issues/675
-THEME=agnoster 
-antigen list | grep $THEME; if [ $? -ne 0 ]; then antigen theme $THEME; fi
+# THEME=agnoster 
+ZSH_THEME=""
+# antigen list | grep $THEME; if [ $? -ne 0 ]; then antigen theme $THEME; fi
 
 # Tell Antigen that you're done.
 antigen apply
+
+# pure
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
 
 # User configuration
 
 source ~/.dotfiles/.zshenv
 source ~/dotfiles/.aliases
+PATH=$PATH:/Users/patricklinpl/.spicetify

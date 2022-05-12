@@ -21,8 +21,8 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   -
-    command: if [[ `uname` = Linux ]]; then git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. && rm -rf fonts; else tput setaf 2; echo "Linux not detected. Skipping..."; fi
-    description: install powerline fonts, see https://github.com/agnoster/agnoster-zsh-theme
+    command: brew tap homebrew/cask-fonts && brew install --cask font-fira-code
+    description: install fira code font
     stdin: true
     stdout: true
     stderr: true
@@ -35,6 +35,12 @@
   -
     command: if [[ -e ~/antigen.zsh ]]; then tput setaf 2; echo "~/antigen.zsh exists. Skipping..."; else cd ~ && curl -L git.io/antigen > antigen.zsh; fi
     description: install antigen
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: mkdir -p "$HOME/.zsh" && git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+    description: install pure
     stdin: true
     stdout: true
     stderr: true
