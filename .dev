@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+source "/opt/dev/dev.sh"

@@ -82,3 +82,4 @@ prompt pure
 # User configuration
 
 source ~/.dotfiles/.zshenv
+source ~/.dotfiles/.dev
