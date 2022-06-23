@@ -7,7 +7,6 @@
 
 - link:
     ~/.ssh/config: .ssh/config
-    ~/.gemrc: .gemrc
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore
     ~/.hushlogin: .hushlogin

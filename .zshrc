@@ -19,7 +19,7 @@ ZSH_DISABLE_COMPFIX=true
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(brew docker git zsh-autosuggestions zsh-completions) 
+# plugins=(brew docker git zsh-autosuggestions zsh-completions)
 
 # source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +39,7 @@ antigen bundles <<EOBUNDLES
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
 	asdf
-    
+
 	# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
 	macos
 
@@ -67,7 +67,7 @@ EOBUNDLES
 # Load the theme.
 # antigen theme robbyrussell
 # https://github.com/zsh-users/antigen/issues/675
-# THEME=agnoster 
+# THEME=agnoster
 ZSH_THEME=""
 # antigen list | grep $THEME; if [ $? -ne 0 ]; then antigen theme $THEME; fi
 
@@ -82,5 +82,3 @@ prompt pure
 # User configuration
 
 source ~/.dotfiles/.zshenv
-source ~/dotfiles/.aliases
-PATH=$PATH:/Users/patricklinpl/.spicetify
