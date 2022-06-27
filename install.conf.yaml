@@ -12,11 +12,6 @@
     ~/.hushlogin: .hushlogin
     ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
-
-- create:
-    - ~/src/github.com
-    - ~/src/bitbucket.org
-
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   -
@@ -25,12 +20,12 @@
     stdin: true
     stdout: true
     stderr: true
-  -
-    command: if [[ -e ~/.asdf ]]; then tput setaf 2; echo "~/.asdf exists. Skipping..."; else cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0; fi
-    description: install asdf
-    stdin: true
-    stdout: true
-    stderr: true
+  # -
+  #   command: if [[ -e ~/.asdf ]]; then tput setaf 2; echo "~/.asdf exists. Skipping..."; else cd ~ && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0; fi
+  #   description: install asdf
+  #   stdin: true
+  #   stdout: true
+  #   stderr: true
   -
     command: if [[ -e ~/antigen.zsh ]]; then tput setaf 2; echo "~/antigen.zsh exists. Skipping..."; else cd ~ && curl -L git.io/antigen > antigen.zsh; fi
     description: install antigen

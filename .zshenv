@@ -19,4 +19,4 @@ alias devdown='brew services stop --all;'
 alias git-personal='git config --local user.email "15319206+patricklinpl@users.noreply.github.com"'
 
 # Language Version Manager
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
