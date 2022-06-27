@@ -81,5 +81,5 @@ prompt pure
 
 # User configuration
 
-source ~/.dotfiles/.zshenv
-source ~/.dotfiles/.dev
+source ~/src/github.com/patricklinpl/.dotfiles/.zshenv
+source ~/src/github.com/patricklinpl/.dotfiles/.dev
