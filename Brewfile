@@ -26,7 +26,7 @@ cask "rectangle"
 # Team communication and collaboration software
 # cask "slack"
 # Music streaming service
-cask "spotify"
+# cask "spotify"
 # Text editor for code, markup and prose
 cask "sublime-text"
 # Open-source code editor
